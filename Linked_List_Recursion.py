@@ -30,7 +30,7 @@ class Linked_list:
         """
         self.head = None
         
-def print_linked_list_recurisvely(node):
+def print_linked_list(linked_list):
 
     """
        Print all the nodes in the list
@@ -38,24 +38,24 @@ def print_linked_list_recurisvely(node):
        : param linked_list : Linked_List object
             List where all the nodes are stored
     """
-    if node == None:
-       print("End!")
-    else:
-        print(f"Node : {node.data}")  
-        node = node.next
-        print_linked_list_recurisvely(node)
+
+    # Create a node to move through the list and set it to the head of the list
+    traverse = linked_list.head
+    
+    # If there are other nodes after display the data in each Node
+    while traverse != None:
+        # Display current node data 
+        print(traverse.data)
+        # Set the next node 
+        traverse = traverse.next
 
 # Create a linked list based on data from a database 
 
-# Set global variables used by the different functions
 names = ["Amy", "Dana", "Brent", "John", "Kerry", "Abby", "Kanika"]
 START = 0
 END = 1
-
 def get_values():
-    """
-
-    """
+    
     global START
     global END
     
@@ -88,4 +88,4 @@ def create_link_list_recursively(llist, value):
 print("\nCreate a Linked List using Recursion with predefine values")
 new_linked_list = Linked_list()
 create_link_list_recursively(new_linked_list, get_values())
-print_linked_list_recurisvely(new_linked_list.head) 
+print_linked_list(new_linked_list) 
