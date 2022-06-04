@@ -7,6 +7,8 @@ The linked list contains two
 elements 1 and 2.The elements 
 are printed in a single line.
 """
+
+
 class Node:
     """
         A class used to represent a Node from a linked list
@@ -259,38 +261,3 @@ to_find = "78"
 add_node = Node("185")
 insert_node(another_linked_list,to_find,add_node)
 print_linked_list(another_linked_list) 
- 
- # Create a linked list based on number of nodes a user entered
-def create_link_list_recursion(llist, number):
-    
-    if number == 0:
-        return None
-    else:
-        node = Node(input("Enter data for node: "))
-        if llist.head == None:
-            llist.head = node
-        else:
-            # Join the newly created node to the current list
-            get_last_node(llist).next = node
-            node = node.next
-
-        create_link_list_recursion(llist, number -1)
-
-def get_last_node(llist):
-
-    traverse = llist.head
-
-    while traverse != None:
-        if traverse.next == None:
-            return traverse
-
-        traverse = traverse.next
-
-
-
-print("\nCreate a Linked List using Recursion")
-number = 3
-new_linked_list = Linked_list()
-create_link_list_recursion(new_linked_list, number)
-print_linked_list(new_linked_list) 
-
