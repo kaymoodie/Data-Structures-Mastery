@@ -1,9 +1,0 @@
-Linked List: Create a Linked List, count the number of nodes in a linked list, Insert into a linked list at the head, Deleted a selected node, Insert before a selected node
-
-Linked_List_Recursion: Create a Linked List based on data from a database
-
-Stacks: Create a stack, remove first item from stack, two stack exercises.
-
-Queues: Initialize a queue, add item to a queue (enqueue), remove item from a a queue (dequeue)
-
-Circular_Linked_List: Add items to a circular linked list and print the list
